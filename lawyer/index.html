@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Юридическая компания «Право и Дело» — пример лендинга</title>
+<meta name="description" content="Пример лендинга для юриста: услуги, этапы, калькулятор стоимости и запись на консультацию.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--d:#1b2a3a;--a:#b08d57;--l:#f4f1ea;--g:#6b7380}
+body{font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--d);line-height:1.5;background:#fff}
+a{color:inherit;text-decoration:none}
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:#fff;z-index:9;border-bottom:1px solid #eee}
+header .w{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:20px}.logo span{color:var(--a)}
+nav a{margin-left:24px;font-size:15px;color:var(--g)}nav a:hover{color:var(--d)}
+.btn{display:inline-block;background:var(--a);color:#fff;border:0;border-radius:10px;padding:14px 26px;font-size:16px;font-weight:600;cursor:pointer}
+.btn:hover{filter:brightness(.9)}
+.hero{background:linear-gradient(120deg,#1b2a3a 0%,#2e4256 100%);color:#fff;padding:90px 0 80px}
+.hero h1{font-size:46px;line-height:1.1;max-width:680px}
+.hero p{font-size:19px;opacity:.85;margin:20px 0 32px;max-width:560px}
+.badges{display:flex;gap:32px;margin-top:48px;flex-wrap:wrap}
+.badges b{display:block;font-size:30px;color:var(--a)}
+.badges span{font-size:14px;opacity:.8}
+section{padding:80px 0}
+h2{font-size:34px;margin-bottom:12px}.sub{color:var(--g);margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--l);border-radius:16px;padding:28px}
+.card h3{font-size:20px;margin-bottom:8px}.card p{color:var(--g);font-size:15px}
+.price{font-size:26px;font-weight:800;margin:14px 0 4px}.price small{font-size:14px;font-weight:400;color:var(--g)}
+.card ul{list-style:none;margin-top:12px}.card li{padding:4px 0 4px 22px;position:relative;font-size:15px}
+.card li:before{content:"✓";position:absolute;left:0;color:var(--a);font-weight:700}
+.hot{background:var(--d);color:#fff}.hot p,.hot small{color:#c9ced6!important}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{border-top:3px solid var(--a);padding-top:18px}
+.step:before{counter-increment:s;content:"0" counter(s);font-size:32px;font-weight:800;color:var(--a)}
+.step h3{font-size:18px;margin:6px 0}.step p{color:var(--g);font-size:15px}
+.calc{background:var(--l);border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+label{display:block;font-size:14px;color:var(--g);margin:16px 0 6px}
+input,select{width:100%;padding:13px 14px;border:1px solid #d8d3cb;border-radius:10px;font-size:16px;background:#fff}
+input[type=range]{padding:0;border:0;accent-color:var(--a)}
+.total{font-size:44px;font-weight:800}.total small{display:block;font-size:15px;font-weight:400;color:var(--g)}
+.faq details{border-bottom:1px solid #e6e1d9;padding:18px 0}
+.faq summary{font-weight:600;font-size:17px;cursor:pointer}
+.faq p{color:var(--g);margin-top:10px}
+.form{background:var(--d);color:#fff;border-radius:20px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.form p{opacity:.8}.form label{color:#c9ced6}
+.ok{display:none;background:#2e7d4f;padding:14px;border-radius:10px;margin-top:14px}
+footer{padding:30px 0;color:var(--g);font-size:14px;border-top:1px solid #eee}
+@media(max-width:860px){nav{display:none}.hero h1{font-size:32px}.grid,.steps,.calc,.form{grid-template-columns:1fr}.hero{padding:60px 0}section{padding:56px 0}.form,.calc{padding:28px}}
+</style>
+</head>
+<body>
+<header><div class="w"><a class="logo" href="#">Право<span>&Дело</span></a>
+<nav><a href="#services">Услуги</a><a href="#steps">Этапы</a><a href="#calc">Калькулятор</a><a href="#faq">Вопросы</a></nav>
+<a class="btn" href="#form">Заявка</a></div></header>
+
+<div class="hero"><div class="w">
+<h1>Юридическая помощь гражданам и бизнесу с фиксированной ценой</h1>
+<p>Разбираем ситуацию на консультации и называем стоимость до начала работы.</p>
+<a class="btn" href="#calc">Рассчитать стоимость</a>
+<div class="badges"><div><b>Фикс</b><span>цена в договоре</span></div><div><b>24 часа</b><span>на ответ по документам</span></div><div><b>Онлайн</b><span>консультации по всей России</span></div></div>
+</div></div>
+
+<section id="services"><div class="w">
+<h2>Услуги</h2><p class="sub">Основные направления</p>
+<div class="grid">
+<div class="card"><h3>Консультация</h3><p>Разбор ситуации и план действий</p><div class="price">от 2 000 ₽<small></small></div><ul><li>Анализ документов</li><li>Оценка перспектив</li><li>Письменные рекомендации</li></ul></div>
+<div class="card hot"><h3>Документы</h3><p>Составление и проверка</p><div class="price">от 5 000 ₽<small>/документ</small></div><ul><li>Договоры</li><li>Претензии</li><li>Исковые заявления</li></ul></div>
+<div class="card"><h3>Суд</h3><p>Представительство под ключ</p><div class="price">от 30 000 ₽<small></small></div><ul><li>Подготовка позиции</li><li>Участие в заседаниях</li><li>Обжалование решений</li></ul></div>
+</div></div></section>
+
+<section id="steps" style="background:var(--l)"><div class="w">
+<h2>Как работаем</h2><p class="sub">Как работаем</p>
+<div class="steps">
+<div class="step"><h3>Заявка</h3><p>Коротко описываете ситуацию.</p></div><div class="step"><h3>Консультация</h3><p>Разбираем документы и варианты.</p></div><div class="step"><h3>Договор</h3><p>Фиксируем объём работ и цену.</p></div><div class="step"><h3>Работа</h3><p>Ведём дело и держим в курсе.</p></div>
+</div></div></section>
+
+<section id="calc"><div class="w">
+<div class="calc">
+<div><h2>Калькулятор услуг</h2><p class="sub" style="margin:0">Предварительная стоимость за минуту</p>
+<label>Количество документов: <b id="av">3</b> шт.</label><input type="range" id="area" min="1" max="20" value="3">
+<label>Тип документа</label><select id="type"><option value="3000">Претензия</option><option value="5000" selected>Договор</option><option value="9000">Исковое заявление</option></select>
+<label>Срочность</label><select id="house"><option value="1">Обычная</option><option value="1.5">Срочно, за 1 день</option></select></div>
+<div><div class="total"><span id="sum">0</span> ₽<small>ориентировочная стоимость работ</small></div><br><a class="btn" href="#form">Записаться на консультацию</a></div>
+</div></div></section>
+
+<section id="faq"><div class="w faq">
+<h2>Частые вопросы</h2><p class="sub">Коротко о главном</p>
+<details><summary>Можно ли получить консультацию онлайн?</summary><p>Да, по видео или в переписке.</p></details><details><summary>Цена может измениться?</summary><p>Нет, если объём работ не меняется.</p></details><details><summary>Работаете с бизнесом?</summary><p>Да, с ИП и компаниями.</p></details><details><summary>Что взять на консультацию?</summary><p>Все документы по вашему вопросу.</p></details>
+</div></section>
+
+<section id="form"><div class="w"><div class="form">
+<div><h2>Консультация юриста</h2><p>Оставьте телефон, перезвоним и согласуем время.</p></div>
+<form id="f"><label>Имя</label><input required placeholder="Как к вам обращаться"><label>Телефон</label><input required type="tel" placeholder="+7 (___) ___-__-__"><br><br><button class="btn" type="submit">Записаться</button><div class="ok" id="ok">Спасибо! Это пример проекта: заявка никуда не отправляется.</div></form>
+</div></div></section>
+
+<footer><div class="w">«Право и Дело» — вымышленная компания. Пример проекта лендинга: адаптивная вёрстка, услуги, калькулятор стоимости, форма записи.</div></footer>
+
+<script>
+const a=document.getElementById('area'),t=document.getElementById('type'),h=document.getElementById('house');
+function c(){document.getElementById('av').textContent=a.value;document.getElementById('sum').textContent=Math.round(a.value*t.value*h.value).toLocaleString('ru-RU')}
+[a,t,h].forEach(e=>e.addEventListener('input',c));c();
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').style.display='block'});
+</script>
+</body>
+</html>
