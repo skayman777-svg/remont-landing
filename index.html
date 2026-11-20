@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ремонт квартир под ключ — пример лендинга</title>
+<meta name="description" content="Пример лендинга для компании по ремонту квартир: услуги, цены, этапы, калькулятор и форма заявки.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--d:#1d2430;--a:#e8742c;--l:#f5f2ed;--g:#6b7380}
+body{font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--d);line-height:1.5;background:#fff}
+a{color:inherit;text-decoration:none}
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:#fff;z-index:9;border-bottom:1px solid #eee}
+header .w{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:20px}.logo span{color:var(--a)}
+nav a{margin-left:24px;font-size:15px;color:var(--g)}nav a:hover{color:var(--d)}
+.btn{display:inline-block;background:var(--a);color:#fff;border:0;border-radius:10px;padding:14px 26px;font-size:16px;font-weight:600;cursor:pointer}
+.btn:hover{background:#d0621d}
+.hero{background:linear-gradient(120deg,#1d2430 0%,#2f3a4c 100%);color:#fff;padding:90px 0 80px}
+.hero h1{font-size:46px;line-height:1.1;max-width:680px}
+.hero p{font-size:19px;opacity:.85;margin:20px 0 32px;max-width:560px}
+.badges{display:flex;gap:32px;margin-top:48px;flex-wrap:wrap}
+.badges b{display:block;font-size:30px;color:var(--a)}
+.badges span{font-size:14px;opacity:.8}
+section{padding:80px 0}
+h2{font-size:34px;margin-bottom:12px}.sub{color:var(--g);margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--l);border-radius:16px;padding:28px}
+.card h3{font-size:20px;margin-bottom:8px}.card p{color:var(--g);font-size:15px}
+.price{font-size:26px;font-weight:800;margin:14px 0 4px}.price small{font-size:14px;font-weight:400;color:var(--g)}
+.card ul{list-style:none;margin-top:12px}.card li{padding:4px 0 4px 22px;position:relative;font-size:15px}
+.card li:before{content:"✓";position:absolute;left:0;color:var(--a);font-weight:700}
+.hot{background:var(--d);color:#fff}.hot p,.hot small{color:#c9ced6!important}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{border-top:3px solid var(--a);padding-top:18px}
+.step:before{counter-increment:s;content:"0" counter(s);font-size:32px;font-weight:800;color:var(--a)}
+.step h3{font-size:18px;margin:6px 0}.step p{color:var(--g);font-size:15px}
+.calc{background:var(--l);border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+label{display:block;font-size:14px;color:var(--g);margin:16px 0 6px}
+input,select{width:100%;padding:13px 14px;border:1px solid #d8d3cb;border-radius:10px;font-size:16px;background:#fff}
+input[type=range]{padding:0;border:0;accent-color:var(--a)}
+.total{font-size:44px;font-weight:800}.total small{display:block;font-size:15px;font-weight:400;color:var(--g)}
+.faq details{border-bottom:1px solid #e6e1d9;padding:18px 0}
+.faq summary{font-weight:600;font-size:17px;cursor:pointer}
+.faq p{color:var(--g);margin-top:10px}
+.form{background:var(--d);color:#fff;border-radius:20px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.form p{opacity:.8}.form label{color:#c9ced6}
+.ok{display:none;background:#2e7d4f;padding:14px;border-radius:10px;margin-top:14px}
+footer{padding:30px 0;color:var(--g);font-size:14px;border-top:1px solid #eee}
+@media(max-width:860px){nav{display:none}.hero h1{font-size:32px}.grid,.steps,.calc,.form{grid-template-columns:1fr}.hero{padding:60px 0}section{padding:56px 0}.form,.calc{padding:28px}}
+</style>
+</head>
+<body>
+<header><div class="w"><a class="logo" href="#">Дом<span>Мастер</span></a>
+<nav><a href="#services">Услуги</a><a href="#steps">Этапы</a><a href="#calc">Калькулятор</a><a href="#faq">Вопросы</a></nav>
+<a class="btn" href="#form">Заявка</a></div></header>
+
+<div class="hero"><div class="w">
+<h1>Ремонт квартир под ключ с фиксированной сметой</h1>
+<p>Смета не меняется после подписания договора. Работы принимаем по этапам, фотоотчёт каждый день.</p>
+<a class="btn" href="#calc">Рассчитать стоимость</a>
+<div class="badges"><div><b>3 тарифа</b><span>от косметики до дизайнерского</span></div><div><b>24 часа</b><span>на выезд замерщика</span></div><div><b>Договор</b><span>с фиксированной сметой</span></div></div>
+</div></div>
+
+<section id="services"><div class="w">
+<h2>Тарифы</h2><p class="sub">Цена за м² с работами, без стоимости материалов</p>
+<div class="grid">
+<div class="card"><h3>Косметический</h3><p>Освежить квартиру без перепланировки</p><div class="price">от 4 500 ₽<small>/м²</small></div><ul><li>Обои или покраска стен</li><li>Ламинат или линолеум</li><li>Замена розеток и выключателей</li></ul></div>
+<div class="card hot"><h3>Капитальный</h3><p>Полная замена коммуникаций</p><div class="price">от 9 000 ₽<small>/м²</small></div><ul><li>Новая электрика и сантехника</li><li>Выравнивание стен и пола</li><li>Плитка в санузле и на кухне</li></ul></div>
+<div class="card"><h3>Дизайнерский</h3><p>Ремонт по дизайн-проекту</p><div class="price">от 14 000 ₽<small>/м²</small></div><ul><li>Сложные потолки и подсветка</li><li>Декоративные покрытия</li><li>Авторский надзор дизайнера</li></ul></div>
+</div></div></section>
+
+<section id="steps" style="background:var(--l)"><div class="w">
+<h2>Как работаем</h2><p class="sub">Четыре понятных этапа</p>
+<div class="steps">
+<div class="step"><h3>Замер</h3><p>Мастер приезжает, замеряет квартиру и обсуждает задачу.</p></div>
+<div class="step"><h3>Смета</h3><p>Готовим подробную смету и фиксируем её в договоре.</p></div>
+<div class="step"><h3>Ремонт</h3><p>Работаем по графику, каждый день присылаем фото.</p></div>
+<div class="step"><h3>Приёмка</h3><p>Принимаете работы по чек-листу, подписываем акт.</p></div>
+</div></div></section>
+
+<section id="calc"><div class="w">
+<div class="calc">
+<div><h2>Калькулятор ремонта</h2><p class="sub" style="margin:0">Предварительная стоимость работ за минуту</p>
+<label>Площадь квартиры: <b id="av">50</b> м²</label><input type="range" id="area" min="15" max="200" value="50">
+<label>Тип ремонта</label><select id="type"><option value="4500">Косметический</option><option value="9000" selected>Капитальный</option><option value="14000">Дизайнерский</option></select>
+<label>Тип дома</label><select id="house"><option value="1">Вторичное жильё</option><option value="0.9">Новостройка</option></select></div>
+<div><div class="total"><span id="sum">450 000</span> ₽<small>ориентировочная стоимость работ</small></div><br><a class="btn" href="#form">Получить точную смету</a></div>
+</div></div></section>
+
+<section id="faq"><div class="w faq">
+<h2>Частые вопросы</h2><p class="sub">Коротко о главном</p>
+<details><summary>Может ли смета вырасти в процессе?</summary><p>Нет, если не меняется объём работ. Дополнительные работы согласуем письменно до начала.</p></details>
+<details><summary>Кто закупает материалы?</summary><p>Как вам удобнее: вы сами по нашему списку или мы с отчётом по чекам.</p></details>
+<details><summary>Как оплачивать работы?</summary><p>По этапам: оплачиваете только принятый этап.</p></details>
+<details><summary>Даёте гарантию?</summary><p>Да, гарантия на работы прописывается в договоре.</p></details>
+</div></section>
+
+<section id="form"><div class="w"><div class="form">
+<div><h2>Бесплатный замер</h2><p>Оставьте телефон, перезвоним и согласуем время выезда мастера.</p></div>
+<form id="f"><label>Имя</label><input required placeholder="Как к вам обращаться"><label>Телефон</label><input required type="tel" placeholder="+7 (___) ___-__-__"><br><br><button class="btn" type="submit">Записаться на замер</button><div class="ok" id="ok">Спасибо! Это пример проекта: заявка никуда не отправляется.</div></form>
+</div></div></section>
+
+<footer><div class="w">«ДомМастер» — вымышленная компания. Пример проекта лендинга: адаптивная вёрстка, калькулятор стоимости, форма заявки.</div></footer>
+
+<script>
+const a=document.getElementById('area'),t=document.getElementById('type'),h=document.getElementById('house');
+function c(){document.getElementById('av').textContent=a.value;document.getElementById('sum').textContent=Math.round(a.value*t.value*h.value).toLocaleString('ru-RU')}
+[a,t,h].forEach(e=>e.addEventListener('input',c));c();
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();document.getElementById('ok').style.display='block'});
+</script>
+</body>
+</html>
